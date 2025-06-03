@@ -19,7 +19,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'lua_ls', 'rust_analyzer', 'html', 'eslint', 'clangd'},
+  ensure_installed = {'lua_ls', 'rust_analyzer', 'html', 'eslint', 'clangd', 'gopls', 'pyright', 'htmx'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({
@@ -92,6 +92,35 @@ vim.lsp.config('lua_ls', {
     Lua = {}
   }
 })
+
+require("sonarlint").setup({
+   server = {
+      cmd = {
+         "sonarlint-language-server",
+         -- Ensure that sonarlint-language-server uses stdio channel
+         "-stdio",
+         "-analyzers",
+         -- paths to the analyzers you need, using those for python and java in this example
+         vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarpython.jar"),
+         vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarcfamily.jar"),
+         vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjava.jar"),
+      },
+	  settings = {
+		sonarLint = {
+			-- pathToCompileCommands = "insert path here"
+		}
+	}
+   },
+   filetypes = {
+      -- Tested and working
+      "cs",
+      "dockerfile",
+      "python",
+      "cpp",
+      "java",
+   },
+})
+
 -- This is where you enable features that only work
 -- if there is a language server active in the file
 vim.api.nvim_create_autocmd('LspAttach', {
