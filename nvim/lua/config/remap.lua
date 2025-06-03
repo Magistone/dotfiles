@@ -35,7 +35,12 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x % <CR>", { silent = true })
+vim.keymap.set("n", "<leader>x", "<cmd> silent !chmod +x % <CR>", { silent = true })
 
 vim.opt.mouse=""
 vim.opt.mousescroll="ver:0,hor:0"
+
+vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
