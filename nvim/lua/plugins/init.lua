@@ -12,7 +12,7 @@ return {
 		  vim.cmd('colorscheme rose-pine')
 	  end
   	},
-	{'nvim-treesitter/nvim-treesitter', branch = master, lazy = false, build = ':TSUpdate'},
+	{'nvim-treesitter/nvim-treesitter', branch = 'master', lazy = false, build = ':TSUpdate'},
 	{
 	  "ThePrimeagen/harpoon",
 	  branch = "harpoon2",
