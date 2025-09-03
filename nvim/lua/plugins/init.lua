@@ -28,4 +28,5 @@ return {
   	'hrsh7th/cmp-nvim-lsp',
 	'laytan/cloak.nvim',
 	'sharkdp/fd',
+	'lewis6991/gitsigns.nvim',
 }
