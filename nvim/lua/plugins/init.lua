@@ -1,9 +1,8 @@
 return {
-	'wbthomason/packer.nvim',
 	{
 	  'nvim-telescope/telescope.nvim', tag = '0.1.8',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+	  dependencies = {'nvim-lua/plenary.nvim'}
   	},
   	{
 	  'rose-pine/neovim',
@@ -16,17 +15,14 @@ return {
 	{
 	  "ThePrimeagen/harpoon",
 	  branch = "harpoon2",
-	  requires = { {"nvim-lua/plenary.nvim"} }
+	  dependencies = { "nvim-lua/plenary.nvim" }
   	},
 	'mbbill/undotree',
   	'tpope/vim-fugitive',
-  	'VonHeikemen/lsp-zero.nvim', branch = 'v4.x',
-  	'neovim/nvim-lspconfig',
-  	'williamboman/mason.nvim',
-  	'williamboman/mason-lspconfig.nvim',
   	'hrsh7th/nvim-cmp',
   	'hrsh7th/cmp-nvim-lsp',
 	'laytan/cloak.nvim',
 	'sharkdp/fd',
 	'lewis6991/gitsigns.nvim',
+	'https://gitlab.com/schrieveslaach/sonarlint.nvim',
 }
