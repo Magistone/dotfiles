@@ -9,5 +9,5 @@ for dir in $inflatable; do
 	cp -r $dir/. ~/
 done
 
-mkdir ~/.local/bin
+mkdir -p ~/.local/bin
 cp -r scripts/. ~/.local/bin/
