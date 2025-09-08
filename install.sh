@@ -4,7 +4,7 @@ for dir in $directories; do
 	cp -rf $dir ~/.config/$dir
 done
 
-inflatable=tmux
+inflatable=(tmux zsh)
 for dir in $inflatable; do
 	cp -r $dir/. ~/
 done
