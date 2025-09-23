@@ -1,11 +1,11 @@
-directories=nvim
+directories=(nvim)
 
-for dir in $directories; do
+for dir in "${directories[@]}"; do
 	cp -rf $dir ~/.config/$dir
 done
 
 inflatable=(tmux zsh)
-for dir in $inflatable; do
+for dir in "${inflatable[@]}"; do
 	cp -r $dir/. ~/
 done
 

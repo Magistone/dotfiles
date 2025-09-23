@@ -3,6 +3,13 @@ export GIT_EDITOR=$VIM
 bindkey -s ^f "tmux-sessionizer\n"
 
 path=("$HOME/.local/bin" $path)
+path=("/opt/nvim-linux-x86_64/bin" $path)
+path=("/usr/local/go/bin" $path)
+path=("$HOME/.cargo/bin" $path)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 validateYaml() {
     python -c 'import yaml,sys;yaml.safe_load(sys.stdin)' < $1
