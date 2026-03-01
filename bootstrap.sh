@@ -1,6 +1,4 @@
-for package in $(cat pkglist); do
-	sudo dnf install $package -y
-done
+sudo dnf install $(cat pkglist) -y
 
 #nvim install
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
