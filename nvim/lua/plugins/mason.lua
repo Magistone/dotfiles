@@ -1,7 +1,7 @@
 return {
 	'mason-org/mason-lspconfig.nvim',
 	opts = {
-		ensure_installed = { 'lua_ls', 'rust_analyzer', 'html', 'eslint', 'clangd', 'gopls', 'pyright', 'htmx' },
+		ensure_installed = { 'lua_ls', 'rust_analyzer', 'html', 'eslint', 'clangd', 'gopls', 'basedpyright', 'htmx' },
 	},
 	dependencies = {
 		'neovim/nvim-lspconfig',
