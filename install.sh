@@ -1,5 +1,7 @@
 directories=(nvim)
 
+mkdir -p ~/.config
+
 for dir in "${directories[@]}"; do
 	cp -rf $dir ~/.config/$dir
 done
